@@ -65,20 +65,20 @@ public class RecommendPage {
     }
 
     @Step("Проверить, что под полем \"Телефон\" появился текст ошибки \"{value}\"")
-    public RecommendPage checkNumberPhone() {
-        errorPhone.shouldHave(text("Это обязательное поле"));
+    public RecommendPage checkNumberPhone(String value) {
+        errorPhone.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверить, что под полем \"Электронная почта\" появился текст ошибки \"{value}\"")
-    public RecommendPage checkEmail() {
-        errorEmail.shouldHave(text("Некорректное значение"));
+    public RecommendPage checkEmail(String value) {
+        errorEmail.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверить, что под полем \"Электронная почта\" появился текст ошибки \"{value}\"")
-    public RecommendPage checkNumberVerification() {
-        numberVerificationError.shouldHave(text("Подтвердите номер телефона"));
+    public RecommendPage checkNumberVerification(String value) {
+        numberVerificationError.shouldHave(text(value));
         return this;
     }
 }

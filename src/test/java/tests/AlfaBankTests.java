@@ -14,7 +14,7 @@ public class AlfaBankTests extends tests.TestBase {
                 .setEmail(testData.email)
                 .setСonsent()
                 .setSubmit()
-                .checkNumberPhone();
+                .checkNumberPhone("Это обязательное поле");
     }
 
     @Test
@@ -22,7 +22,7 @@ public class AlfaBankTests extends tests.TestBase {
     void enterIncorrectValueInEmailTest() {
         recommendPage.openPage()
                 .setEmail("рус@домен.рф")
-                .checkEmail();
+                .checkEmail("Некорректное значение");
     }
 
     @Test
@@ -35,7 +35,7 @@ public class AlfaBankTests extends tests.TestBase {
                 .setNumberPhone(testData.numberPhone)
                 .setСonsent()
                 .setSubmit()
-                .checkNumberVerification();
+                .checkNumberVerification("Подтвердите номер телефона");
     }
 
     @Test
