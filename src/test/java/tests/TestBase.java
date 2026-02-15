@@ -36,6 +36,7 @@ public class TestBase {
         Configuration.browser = browser;
         Configuration.browserVersion = version;
         Configuration.browserSize = browserSize;
+        Configuration.headless = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
