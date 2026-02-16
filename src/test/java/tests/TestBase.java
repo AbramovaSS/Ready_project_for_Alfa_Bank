@@ -8,6 +8,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.BlogPage;
 import pages.HomePage;
@@ -25,6 +26,7 @@ public class TestBase {
     TestData testData = new TestData();
 
     @BeforeAll
+    @DisplayName("Инициализация тестового окружения для тестов")
     static void testPrecondition() {
 
         String baseUrl = System.getProperty("baseUrl", "https://job.alfabank.ru");
@@ -36,7 +38,6 @@ public class TestBase {
         Configuration.browser = browser;
         Configuration.browserVersion = version;
         Configuration.browserSize = browserSize;
-        Configuration.headless = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -48,6 +49,7 @@ public class TestBase {
     }
 
     @BeforeEach
+    @DisplayName("Добавление Allure-логирования для каждого теста")
     public void beforeEachTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
