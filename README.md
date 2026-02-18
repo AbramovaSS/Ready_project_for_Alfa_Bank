@@ -49,6 +49,12 @@ clean test
 -Dversion=${browserVersion}"
 -DbrowserSize=${browserSize}" 
 ```
+**Параметры сборки**
+- `BASE_URL` - базовый URL-адрес веб-сайта или приложения
+- `REMOTE_URL` - удаленный URL (=Selenoid Hub URL)
+- `BROWSER` - браузер для выполнения автотестов
+- `BROWSER_VERSION` - версия браузера
+- `BROWSER_SIZE` - размер окна браузера (ширина × высота)
 ## <a id="сборка-в-jenkins">Сборка в Jenkins</a>
 Для выбора параметров и запуска сборки необходимо нажать <kbd>Build with Parameters</kbd>
 
