@@ -1,4 +1,4 @@
-# Проект по автоматизации тестовых сценариев для сайта вакансий Альфа-Банка
+# Проект по автоматизации тестовых сценариев для [сайта](https://job.alfabank.ru/) вакансий Альфа-Банка
 ![Основная информация](images/screenshots/alfa.jpg)
 
 <abbr title="Java"><img src="images/icons/alfabank.gif" alt="Java" width="20" height="20"></abbr> Содержание
