@@ -1,5 +1,5 @@
 # Проект по автоматизации тестовых сценариев для [сайта](https://job.alfabank.ru/) вакансий Альфа-Банка
-![Основная информация](images/screenshots/alfa.jpg)
+![Основная информация](media/screenshots/alfa.jpg)
 
 <abbr title="Java"><img src="images/icons/alfabank.gif" alt="Java" width="20" height="20"></abbr> Содержание
 ---
@@ -16,16 +16,16 @@
 ## <a id="инструменты-и-технологии">Инструменты и технологии</a>
 
 <p align="center">
-   <abbr title="Java"><img src="images/icons/java.svg" alt="Java" width="50" height="50"></abbr>
-   <abbr title="Gradle"><img src="images/icons/gradle_logo_icon_248152.svg" alt="Gradle" width="50" height="50"></abbr>
-   <abbr title="Selenoid"><img src="images/icons/selenide.png" alt="Selenide" width="50" height="50"></abbr>
-   <abbr title="JUnit 5"><img src="images/icons/JUnit5.svg" alt="JUnit 5" width="50" height="50"></abbr>
-   <abbr title="Jenkins"><img src="images/icons/jenkins.svg" alt="Jenkins" width="50" height="50"></abbr>
-   <abbr title="Selenoid"><img src="images/icons/selenoid.png" alt="Selenoid" width="50" height="50"></abbr>
-   <abbr title="Allure"><img src="images/icons/allure.Default" alt="Allure" width="50" height="50"></abbr>
-   <abbr title="Allure TestOps"><img src="images/icons/Allure2.svg" alt="Allure TestOps" width="50" height="50"></abbr>
-   <abbr title="Jira"><img src="images/icons/atlassian_jira.svg" alt="Jira" width="50" height="50"></abbr>
-   <abbr title="Telegram"><img src="images/icons/telegram.png" alt="Telegram" width="50" height="50"></abbr>
+   <abbr title="Java"><img src="media/icons/java.svg" alt="Java" width="50" height="50"></abbr>
+   <abbr title="Gradle"><img src="media/icons/gradle_logo_icon_248152.svg" alt="Gradle" width="50" height="50"></abbr>
+   <abbr title="Selenoid"><img src="media/icons/selenide.png" alt="Selenide" width="50" height="50"></abbr>
+   <abbr title="JUnit 5"><img src="media/icons/JUnit5.svg" alt="JUnit 5" width="50" height="50"></abbr>
+   <abbr title="Jenkins"><img src="media/icons/jenkins.svg" alt="Jenkins" width="50" height="50"></abbr>
+   <abbr title="Selenoid"><img src="media/icons/selenoid.png" alt="Selenoid" width="50" height="50"></abbr>
+   <abbr title="Allure"><img src="media/icons/allure.Default" alt="Allure" width="50" height="50"></abbr>
+   <abbr title="Allure TestOps"><img src="media/icons/Allure2.svg" alt="Allure TestOps" width="50" height="50"></abbr>
+   <abbr title="Jira"><img src="media/icons/atlassian_jira.svg" alt="Jira" width="50" height="50"></abbr>
+   <abbr title="Telegram"><img src="media/icons/telegram.png" alt="Telegram" width="50" height="50"></abbr>
 </p>
 
 ## <a id="описание-проекта">Описание проекта</a>
@@ -58,31 +58,31 @@ clean test
 ## <a id="сборка-в-jenkins">Сборка в Jenkins</a>
 Для выбора параметров и запуска сборки необходимо нажать <kbd>Build with Parameters</kbd>
 
-![Основная информация](images/screenshots/jenkins_1.jpg)
+![Основная информация](media/screenshots/jenkins_1.jpg)
 ## <a id="пример-allure-отчета">Пример Allure-отчета</a>
 Увидеть результаты автотестов позволяет интерактивный Allure-отчет
 ### Обзорная информация
-![Основная информация](images/screenshots/allure_report_dashbord.jpg)
+![Основная информация](media/screenshots/allure_report_dashbord.jpg)
 ### Тест-кейсы
-![Основная информация](images/screenshots/allure_report_test.jpg)
+![Основная информация](media/screenshots/allure_report_test.jpg)
 ## <a id="интеграция-с-Allure-TestOps">Интеграция с Allure TestOps</a>
 Интеграция с Jenkins позволяет автоматически передавать результаты тестов из 
 сборки в TestOps
 
 ### Дашборд
-![Основная информация](images/screenshots/allure_testops_dashbord.jpg)
+![Основная информация](media/screenshots/allure_testops_dashbord.jpg)
 ### Тест-кейсы
-![Основная информация](images/screenshots/allure_testops_test.jpg)
+![Основная информация](media/screenshots/allure_testops_test.jpg)
 ## <a id="интеграция-с-Jira">Интеграция с  Jira</a>
 В проекте настроена автоматическая отправка данных о сборке из Jenkins в Jira
 
-![Основная информация](images/screenshots/jira_3.jpg)
+![Основная информация](media/screenshots/jira_3.jpg)
 ## <a id="уведомление-в-telegram">Уведомление в Telegram</a>
 Результат прогона отправляется в чат мессенджера Telegram
 
-![Основная информация](images/screenshots/telegram_1.jpg)
+![Основная информация](media/screenshots/telegram_1.jpg)
 ## <a id="пример-видео-из-selenoid">Пример видео из Selenoid</a>
-![описание](images/video/selenoid_gif.gif)
+![описание](media/video/selenoid_gif.gif)
 
 
 

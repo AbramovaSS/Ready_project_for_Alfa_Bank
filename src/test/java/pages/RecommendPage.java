@@ -24,7 +24,6 @@ public class RecommendPage {
     @Step("Перейти на страницу рекомендаций")
     public RecommendPage openPage() {
         open("/recommend");
-        $("#form-response_recommend").$(byText("Хочу быть рекомендателем"));
         return this;
     }
 

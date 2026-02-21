@@ -28,16 +28,11 @@ public class TestBase {
     @BeforeAll
     @DisplayName("Инициализация тестового окружения для тестов")
     static void testPrecondition() {
-
-        String baseUrl = System.getProperty("baseUrl", "https://job.alfabank.ru");
-        String browser = System.getProperty("browser", "chrome");
-        String version = System.getProperty("version", "128");
-        String browserSize = System.getProperty("browserSize", "1920x1080");
         String remoteUrl = System.getProperty("remoteUrl", null);
-        Configuration.baseUrl = baseUrl;
-        Configuration.browser = browser;
-        Configuration.browserVersion = version;
-        Configuration.browserSize = browserSize;
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://job.alfabank.ru");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("version", "128");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
