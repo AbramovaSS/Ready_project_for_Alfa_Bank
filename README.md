@@ -16,17 +16,36 @@
 ## <a id="инструменты-и-технологии">Инструменты и технологии</a>
 
 <p align="center">
-   <abbr title="Java"><img src="media/icons/java.svg" alt="Java" width="50" height="50"></abbr>
-   <abbr title="Gradle"><img src="media/icons/gradle_logo_icon_248152.svg" alt="Gradle" width="50" height="50"></abbr>
-   <abbr title="Selenoid"><img src="media/icons/selenide.png" alt="Selenide" width="50" height="50"></abbr>
-   <abbr title="JUnit 5"><img src="media/icons/JUnit5.svg" alt="JUnit 5" width="50" height="50"></abbr>
-   <abbr title="Jenkins"><img src="media/icons/jenkins.svg" alt="Jenkins" width="50" height="50"></abbr>
-   <abbr title="Selenoid"><img src="media/icons/selenoid.png" alt="Selenoid" width="50" height="50"></abbr>
-   <abbr title="Allure"><img src="media/icons/allure.Default" alt="Allure" width="50" height="50"></abbr>
-   <abbr title="Allure TestOps"><img src="media/icons/Allure2.svg" alt="Allure TestOps" width="50" height="50"></abbr>
-   <abbr title="Jira"><img src="media/icons/atlassian_jira.svg" alt="Jira" width="50" height="50"></abbr>
-   <abbr title="Telegram"><img src="media/icons/telegram.png" alt="Telegram" width="50" height="50"></abbr>
-</p>
+   <a href="https://www.java.com" target="_blank" rel="noopener">
+<img src="media/icons/java.svg" alt="Java" width="50" height="50">
+</a>
+   <a href="https://gradle.org" target="_blank" rel="noopener">
+  <img src="media/icons/gradle_logo_icon_248152.svg" alt="Gradle" width="50" height="50">
+</a>
+   <a href="https://selenide.org" target="_blank" rel="noopener">
+  <img src="media/icons/selenide.png" alt="Selenide" width="50" height="50">
+</a>
+   <a href="https://junit.org/junit5/" target="_blank" rel="noopener">
+  <img src="media/icons/JUnit5.svg" alt="JUnit 5" width="50" height="50">
+</a>
+   <a href="https://www.jenkins.io" target="_blank" rel="noopener">
+  <img src="media/icons/jenkins.svg" alt="Jenkins" width="50" height="50">
+</a>
+   <a href="https://aerokube.com/selenoid/" target="_blank" rel="noopener">
+  <img src="media/icons/selenoid.png" alt="Selenoid" width="50" height="50">
+</a>
+   <a href="https://allure.qatools.ru" target="_blank" rel="noopener">
+  <img src="media/icons/allure.Default" alt="Allure" width="50" height="50">
+</a>
+   <a href="https://allure.qatools.ru/testops" target="_blank" rel="noopener">
+  <img src="media/icons/Allure2.svg" alt="Allure TestOps" width="50" height="50">
+</a>
+   <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">
+  <img src="media/icons/atlassian_jira.svg" alt="Jira" width="50" height="50">
+</a>
+   <a href="https://telegram.org" target="_blank" rel="noopener">
+  <img src="media/icons/telegram.png" alt="Telegram" width="50" height="50">
+</a>
 
 ## <a id="описание-проекта">Описание проекта</a>
 
@@ -56,25 +75,34 @@ clean test
 - `BROWSER_VERSION` - версия браузера
 - `BROWSER_SIZE` - размер окна браузера (ширина × высота)
 ## <a id="сборка-в-jenkins">Сборка в Jenkins</a>
-Для выбора параметров и запуска сборки необходимо нажать <kbd>Build with Parameters</kbd>
+Jenkins автоматизирует запуск автотестов при изменении кода или по расписанию. 
+Для выбора параметров (например, окружения, браузера, версии браузера и т.д.) и запуска сборки в Jenkins необходимо нажать <kbd>Build with Parameters</kbd>.
+После прогона формируется отчет: результаты тестов, включая скриншоты, логи и видео, сохраняются в формате Allure и доступны по ссылке.
 
 ![Основная информация](media/screenshots/jenkins_1.jpg)
 ## <a id="пример-allure-отчета">Пример Allure-отчета</a>
-Увидеть результаты автотестов позволяет интерактивный Allure-отчет
+Увидеть результаты автотестов можно в интерактивном Allure-отчёте — с детальными скриншотами, логами, видео и историей запусков. 
+Ссылка на отчёт доступна после успешного запуска сборки в Jenkins.
 ### Обзорная информация
 ![Основная информация](media/screenshots/allure_report_dashbord.jpg)
 ### Тест-кейсы
 ![Основная информация](media/screenshots/allure_report_test.jpg)
 ## <a id="интеграция-с-Allure-TestOps">Интеграция с Allure TestOps</a>
 Интеграция с Jenkins позволяет автоматически передавать результаты тестов из 
-сборки в TestOps
+сборки в TestOps, где можно отслеживать историю запусков, анализировать прогоны, управлять тест-кейсами, дефектами и требованиями в одном месте. Через общие дашборды
+можно делиться отчётами с командой и заказчиками.<br>
+Jenkins-сборки можно запускать напрямую из Allure TestOps, выбрав нужную джобу и указав параметры.
 
 ### Дашборд
 ![Основная информация](media/screenshots/allure_testops_dashbord.jpg)
 ### Тест-кейсы
 ![Основная информация](media/screenshots/allure_testops_test.jpg)
 ## <a id="интеграция-с-Jira">Интеграция с  Jira</a>
-В проекте настроена автоматическая отправка данных о сборке из Jenkins в Jira
+В проекте настроена автоматическая отправка данных о сборке из Jenkins в систему управления задачами и проектами - Jira. В результате в задачах Jira появляются:
+- Ссылка на сборку в Jenkins с деталями (номер, статус, логи)
+- Список изменений (коммиты, авторы)
+- Статус тестов (прошли/упали — на основе Allure-отчёта)
+- Привязка к задачам — каждая сборка автоматически связывается с соответствующими задачами (Epics, Stories, Bugs)
 
 ![Основная информация](media/screenshots/jira_3.jpg)
 ## <a id="уведомление-в-telegram">Уведомление в Telegram</a>

@@ -2,9 +2,11 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.WebConfig;
 import data.TestData;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,9 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.BlogPage;
 import pages.HomePage;
 import pages.RecommendPage;
-
 import java.util.Map;
-
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
@@ -25,14 +25,16 @@ public class TestBase {
     BlogPage blogPage = new BlogPage();
     TestData testData = new TestData();
 
+    private static final WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
+
     @BeforeAll
     @DisplayName("Инициализация тестового окружения для тестов")
     static void testPrecondition() {
-        String remoteUrl = System.getProperty("remoteUrl", null);
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://job.alfabank.ru");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "128");
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        String remoteUrl = webConfig.getRemoteUrl();
+        Configuration.baseUrl = webConfig.getBaseUrl();
+        Configuration.browser = webConfig.getBrowserName();
+        Configuration.browserVersion = webConfig.getBrowserVersion();
+        Configuration.browserSize = webConfig.getBrowserSize();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -41,6 +43,7 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = remoteUrl;
+
     }
 
     @BeforeEach
