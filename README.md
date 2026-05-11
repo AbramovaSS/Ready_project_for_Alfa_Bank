@@ -16,36 +16,16 @@
 ## <a id="инструменты-и-технологии">Инструменты и технологии</a>
 
 <p align="center">
-   <a href="https://www.java.com" target="_blank" rel="noopener">
-<img src="media/icons/java.svg" alt="Java" width="50" height="50">
-</a>
-   <a href="https://gradle.org" target="_blank" rel="noopener">
-  <img src="media/icons/gradle_logo_icon_248152.svg" alt="Gradle" width="50" height="50">
-</a>
-   <a href="https://selenide.org" target="_blank" rel="noopener">
-  <img src="media/icons/selenide.png" alt="Selenide" width="50" height="50">
-</a>
-   <a href="https://junit.org/junit5/" target="_blank" rel="noopener">
-  <img src="media/icons/JUnit5.svg" alt="JUnit 5" width="50" height="50">
-</a>
-   <a href="https://www.jenkins.io" target="_blank" rel="noopener">
-  <img src="media/icons/jenkins.svg" alt="Jenkins" width="50" height="50">
-</a>
-   <a href="https://aerokube.com/selenoid/" target="_blank" rel="noopener">
-  <img src="media/icons/selenoid.png" alt="Selenoid" width="50" height="50">
-</a>
-   <a href="https://allure.qatools.ru" target="_blank" rel="noopener">
-  <img src="media/icons/allure.Default" alt="Allure" width="50" height="50">
-</a>
-   <a href="https://allure.qatools.ru/testops" target="_blank" rel="noopener">
-  <img src="media/icons/Allure2.svg" alt="Allure TestOps" width="50" height="50">
-</a>
-   <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">
-  <img src="media/icons/atlassian_jira.svg" alt="Jira" width="50" height="50">
-</a>
-   <a href="https://telegram.org" target="_blank" rel="noopener">
-  <img src="media/icons/telegram.png" alt="Telegram" width="50" height="50">
-</a>
+   <a href="https://www.java.com" target="_blank" rel="noopener"><img src="media/icons/java.svg" alt="Java" width="50" height="50"></a>
+   <a href="https://gradle.org" target="_blank" rel="noopener"><img src="media/icons/gradle_logo_icon_248152.svg" alt="Gradle" width="50" height="50"></a>
+   <a href="https://selenide.org" target="_blank" rel="noopener"><img src="media/icons/selenide.png" alt="Selenide" width="50" height="50"></a>
+   <a href="https://junit.org/junit5/" target="_blank" rel="noopener"><img src="media/icons/JUnit5.svg" alt="JUnit 5" width="50" height="50"></a>
+   <a href="https://www.jenkins.io" target="_blank" rel="noopener"><img src="media/icons/jenkins.svg" alt="Jenkins" width="50" height="50"></a>
+   <a href="https://aerokube.com/selenoid/" target="_blank" rel="noopener"><img src="media/icons/selenoid.png" alt="Selenoid" width="50" height="50"></a>
+   <a href="https://allure.qatools.ru" target="_blank" rel="noopener"><img src="media/icons/allure.Default" alt="Allure" width="50" height="50"></a>
+   <a href="https://allure.qatools.ru/testops" target="_blank" rel="noopener"><img src="media/icons/Allure2.svg" alt="Allure TestOps" width="50" height="50"></a>
+   <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener"><img src="media/icons/atlassian_jira.svg" alt="Jira" width="50" height="50"></a>
+   <a href="https://telegram.org" target="_blank" rel="noopener"><img src="media/icons/telegram.png" alt="Telegram" width="50" height="50"></a>
 
 ## <a id="описание-проекта">Описание проекта</a>
 
