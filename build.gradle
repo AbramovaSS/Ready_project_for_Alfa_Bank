@@ -28,11 +28,12 @@ dependencies {
             "io.qameta.allure:allure-selenide:2.32.0",
             "org.junit.jupiter:junit-jupiter:5.10.0",
             "org.slf4j:slf4j-simple:2.0.17",
-            'org.aeonbits.owner:owner:1.0.12'
+            'org.aeonbits.owner:owner:1.0.4',
+            'io.github.bonigarcia:webdrivermanager:5.2.1',
+            'org.assertj:assertj-core:3.23.1'
     )
     testRuntimeOnly(
-            'org.junit.platform:junit-platform-launcher',
-            'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+            'org.junit.platform:junit-platform-launcher'
     )
 }
 
