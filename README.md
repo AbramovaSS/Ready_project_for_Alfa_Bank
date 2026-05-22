@@ -33,7 +33,7 @@ UI-автотесты написаны на языке `Java` c использо
 Удаленный запуск тестов происходит через джобу в [Jenkins](https://jenkins.autotests.cloud/view/java_students/job/AbramovaS_Ready_project_for_Alfa_Bank/), 
 которая также отвечает за генерацию Allure-отчетов и отправку уведомлений о 
 результатах в Telegram. Для комплексного анализа результатов настроена интеграция с 
-системами [Allure TestOps](https://allure.autotests.cloud/jobrun/51167) и [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1578).
+системами [Allure TestOps](https://allure.autotests.cloud/project/5187/test-cases?treeId=0) и [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1578).
 ## <a id="запуск-автотестов">Запуск автотестов</a>
 **Локальный запуск через терминал**
 ```
@@ -64,9 +64,9 @@ Jenkins автоматизирует запуск автотестов при и
 Увидеть результаты автотестов можно в интерактивном Allure-отчёте — с детальными скриншотами, логами, видео и историей запусков. 
 Ссылка на отчёт доступна после успешного запуска сборки в Jenkins.
 ### Обзорная информация
-![Основная информация](media/screenshots/allure_report_dashbord.jpg)
+![Основная информация](media/screenshots/img_jenk.PNG)
 ### Тест-кейсы
-![Основная информация](media/screenshots/allure_report_test.jpg)
+![Основная информация](media/screenshots/img_jenk_2.PNG)
 ## <a id="интеграция-с-Allure-TestOps">Интеграция с Allure TestOps</a>
 Интеграция с Jenkins позволяет автоматически передавать результаты тестов из 
 сборки в TestOps, где можно отслеживать историю запусков, анализировать прогоны, управлять тест-кейсами, дефектами и требованиями в одном месте. Через общие дашборды
@@ -74,9 +74,9 @@ Jenkins автоматизирует запуск автотестов при и
 Jenkins-сборки можно запускать напрямую из Allure TestOps, выбрав нужную джобу и указав параметры.
 
 ### Дашборд
-![Основная информация](media/screenshots/allure_testops_dashbord.jpg)
+![Основная информация](media/screenshots/img_TO_2.png)
 ### Тест-кейсы
-![Основная информация](media/screenshots/allure_testops_test.jpg)
+![Основная информация](media/screenshots/img_TO.PNG)
 ## <a id="интеграция-с-Jira">Интеграция с  Jira</a>
 В проекте настроена автоматическая отправка данных о сборке из Jenkins в систему управления задачами и проектами - Jira. В результате в задачах Jira появляются:
 - Ссылка на сборку в Jenkins с деталями (номер, статус, логи)
@@ -84,7 +84,7 @@ Jenkins-сборки можно запускать напрямую из Allure 
 - Статус тестов (прошли/упали — на основе Allure-отчёта)
 - Привязка к задачам — каждая сборка автоматически связывается с соответствующими задачами (Epics, Stories, Bugs)
 
-![Основная информация](media/screenshots/jira_3.jpg)
+![Основная информация](media/screenshots/tele_img.jpg)
 ## <a id="уведомление-в-telegram">Уведомление в Telegram</a>
 Результат прогона отправляется в чат мессенджера Telegram
 
