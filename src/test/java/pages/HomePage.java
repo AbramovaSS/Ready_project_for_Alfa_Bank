@@ -11,7 +11,8 @@ public class HomePage {
 
     private final SelenideElement
             searchInput = $(".SearchBarWidget_search-bar__input__18IWy"),
-            tag = $(".VacanciesItem_vacancy__bl_container___ziAK");
+            tag = $(".VacanciesItem_vacancy__bl_container___ziAK"),
+            vacanciesButton = $("WantToAlfa_button__Wwh0a WantToAlfa_max__VkhfU");
 
     @Step("Открыть главную страницу https://job.alfabank.ru/")
     public HomePage openPage() {
@@ -34,6 +35,12 @@ public class HomePage {
     @Step("Проверить, что появляется вакансия с тегом \"{value}\"")
     public HomePage checkTag(String value) {
         tag.$(byText(value)).shouldHave(text(value));
+        return this;
+    }
+
+    @Step("Нажать на кнопку \"Подбор вакансий\"")
+    public HomePage selectOfVacanciesButton() {
+        vacanciesButton.shouldHave(text("Подбор вакансий")).click();
         return this;
     }
 

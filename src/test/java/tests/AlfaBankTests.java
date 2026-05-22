@@ -1,9 +1,18 @@
 package tests;
 
+import data.TestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pages.BlogPage;
+import pages.HomePage;
+import pages.RecommendPage;
 
 public class AlfaBankTests extends tests.TestBase {
+
+    HomePage homePage = new HomePage();
+    RecommendPage recommendPage = new RecommendPage();
+    BlogPage blogPage = new BlogPage();
+    TestData testData = new TestData();
 
     @Test
     @DisplayName("Форма рекомендации. Поле \"Телефон\" обязательно для заполнения")
@@ -52,6 +61,13 @@ public class AlfaBankTests extends tests.TestBase {
         homePage.openPage()
                 .setTab();
         blogPage.checkPageTitle("Полезные статьи о карьере в Альфа‑Банке");
+    }
+
+    @Test
+    @DisplayName("Открытие диалогового окна \"Подбор вакансий\"")
+    void goToDialogTest() {
+        homePage.openPage()
+                .selectOfVacanciesButton();
     }
 }
 

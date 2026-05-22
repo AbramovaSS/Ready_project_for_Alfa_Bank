@@ -21,9 +21,19 @@ public interface WebConfig extends Config {
     @DefaultValue("1920x1080")
     String getBrowserSize();
 
+    @Key("isRemote")
+    @DefaultValue("false")
+    boolean isRemote();
+
     @Key("remoteUrl")
     @DefaultValue("")
     String getRemoteUrl();
+
+    @Key("remoteUsername")
+    String getRemoteUsername();
+
+    @Key("remotePassword")
+    String getRemotePassword();
 
     @Key("baseUrl")
     @DefaultValue("https://job.alfabank.ru")
