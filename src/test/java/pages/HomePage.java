@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
@@ -12,7 +13,8 @@ public class HomePage {
     private final SelenideElement
             searchInput = $(".SearchBarWidget_search-bar__input__18IWy"),
             tag = $(".VacanciesItem_vacancy__bl_container___ziAK"),
-            vacanciesButton = $("WantToAlfa_button__Wwh0a WantToAlfa_max__VkhfU");
+            vacanciesButton = $("WantToAlfa_button__Wwh0a WantToAlfa_max__VkhfU"),
+            titleHome = $(".main-text");
 
     @Step("Открыть главную страницу https://job.alfabank.ru/")
     public HomePage openPage() {
@@ -38,9 +40,9 @@ public class HomePage {
         return this;
     }
 
-    @Step("Нажать на кнопку \"Подбор вакансий\"")
-    public HomePage selectOfVacanciesButton() {
-        vacanciesButton.shouldHave(text("Подбор вакансий")).click();
+    @Step("Проверить, что отображается главная страница с заголовком \"Работа в Альфа-Банке\"")
+    public HomePage checkTitleHome() {
+        titleHome.shouldHave(Condition.partialText("Работа в Альфа-Банке"));
         return this;
     }
 

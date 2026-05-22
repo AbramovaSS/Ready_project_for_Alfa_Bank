@@ -7,6 +7,8 @@ import pages.BlogPage;
 import pages.HomePage;
 import pages.RecommendPage;
 
+import static data.TestData.*;
+
 public class AlfaBankTests extends tests.TestBase {
 
     HomePage homePage = new HomePage();
@@ -23,15 +25,15 @@ public class AlfaBankTests extends tests.TestBase {
                 .setEmail(testData.email)
                 .setСonsent()
                 .setSubmit()
-                .checkNumberPhone("Это обязательное поле");
+                .checkNumberPhone(HINT_EMPTY);
     }
 
     @Test
     @DisplayName("Форма рекомендации. Ввод некорректного значения в поле \"Электронная почта\"")
     void enterIncorrectValueInEmailTest() {
         recommendPage.openPage()
-                .setEmail("рус@домен.рф")
-                .checkEmail("Некорректное значение");
+                .setEmail(EMAIL)
+                .checkEmail(HINT_INVALID);
     }
 
     @Test
@@ -44,15 +46,15 @@ public class AlfaBankTests extends tests.TestBase {
                 .setNumberPhone(testData.numberPhone)
                 .setСonsent()
                 .setSubmit()
-                .checkNumberVerification("Подтвердите номер телефона");
+                .checkNumberVerification(HINT_CONFIRMATION);
     }
 
     @Test
     @DisplayName("Поиск вакансии QA")
     void jobSearchTest() {
         homePage.openPage()
-                .setVacancy("QA")
-                .checkTag("Тестирование");
+                .setVacancy(VALUE_VACANCY)
+                .checkTag(TAG);
     }
 
     @Test
@@ -60,14 +62,29 @@ public class AlfaBankTests extends tests.TestBase {
     void goToBlogTest() {
         homePage.openPage()
                 .setTab();
-        blogPage.checkPageTitle("Полезные статьи о карьере в Альфа‑Банке");
+        blogPage.checkPageTitle(PAGE_TITLE);
     }
 
     @Test
-    @DisplayName("Открытие диалогового окна \"Подбор вакансий\"")
-    void goToDialogTest() {
+    @DisplayName("Переход на страницу статьи блога")
+    void goToPageBlogTest() {
         homePage.openPage()
-                .selectOfVacanciesButton();
+                .setTab();
+        blogPage.checkPageTitle(PAGE_TITLE)
+                .tapFirstSearchResult()
+                .verifyTitleResult();
+    }
+
+    @Test
+    @DisplayName("Возврат домой при клике на лого")
+    void goToHomeTest() {
+        homePage.openPage()
+                .setTab();
+        blogPage.checkPageTitle(PAGE_TITLE)
+                .clickLogo();
+        homePage.checkTitleHome();
+
+
     }
 }
 
