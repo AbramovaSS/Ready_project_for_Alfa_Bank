@@ -18,7 +18,7 @@ def junitVersion = "6.0.2",
     javafakerVersion = "1.0.2",
     slf4jVersion = "2.0.17",
     selenideVersion = "7.16.0",
-    webDriverManagerVersion = "6.3.3",
+    webDriverManagerVersion = "6.3.4",
     assertjVersion = "3.23.1",
     allureVersion = "2.32.0"
 
