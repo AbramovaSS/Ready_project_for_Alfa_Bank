@@ -41,19 +41,21 @@ gradle clean test
 ```
 **Удалённый запуск в Jenkins**
 ```
-clean test 
--DbaseUrl=${baseUrl}" 
--DremoteUrl=${remoteUrl}"
--Dbrowser=${browser}" 
--Dversion=${browserVersion}"
--DbrowserSize=${browserSize}" 
+clean
+test
+-DbrowserName="$BROWSER"
+-DbrowserVersion="$BROWSER_VERSION"
+-DbrowserSize="$BROWSER_SIZE"
+-Denv="$ENV"
+-DisRemote="$IS_REMOTE" 
 ```
 **Параметры сборки**
-- `BASE_URL` - базовый URL-адрес веб-сайта или приложения
-- `REMOTE_URL` - удаленный URL (=Selenoid Hub URL)
 - `BROWSER` - браузер для выполнения автотестов
 - `BROWSER_VERSION` - версия браузера
 - `BROWSER_SIZE` - размер окна браузера (ширина × высота)
+- `ENV` - выбор локального или удаленного запуска
+- `IS_REMOTE` - флаг локального\удаленного режима
+
 ## <a id="сборка-в-jenkins">Сборка в Jenkins</a>
 Jenkins автоматизирует запуск автотестов при изменении кода или по расписанию. 
 Для выбора параметров (например, окружения, браузера, версии браузера и т.д.) и запуска сборки в Jenkins необходимо нажать <kbd>Build with Parameters</kbd>.
